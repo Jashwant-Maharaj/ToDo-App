@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyARDJE5XqPZQcUIcrfwsMDEtzOvgsTbXcI",
+          authDomain: "to-do-by-jashwant.firebaseapp.com",
+          databaseURL: "https://to-do-by-jashwant.firebaseio.com",
+          projectId: "to-do-by-jashwant",
+          storageBucket: "to-do-by-jashwant.appspot.com",
+          messagingSenderId: "529034128502",
+          appId: "1:529034128502:web:809b6f646437f6129d0357",
+          measurementId: "G-K7RQJBPL88"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+    <title>To-Do App</title>
+</head>
+<body>
+    <h1 class="heading">To-Do List</h1>
+    <div>
+        <input type="text" id="display" placeholder="Enter What to do...">
+        <button class="btn-add" onclick="add()">Add</button>
+        <button class="btn-delete" onclick="deleteAll()">Delete All</button>
+    </div>
+    <div>
+        <ul id="list" class="ul-style"></ul>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
